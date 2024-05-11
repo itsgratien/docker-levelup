@@ -10,7 +10,7 @@ app.use(express.json());
 app.get('/', (req, res)=> {
     const users = [{id: faker.string.uuid(), names: faker.person.fullName()}, 
         {id: faker.string.uuid(), names: faker.person.fullName()}]
-    return res.json({message: 'ok',name: 'made by gratien',data: users})
+    return res.json({message: 'ok',data: users})
 });
 
 app.listen(port, ()=> {
